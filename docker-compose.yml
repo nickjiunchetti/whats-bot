@@ -1,0 +1,17 @@
+services:
+  browserless:
+    container_name: 'browserless'
+    image: browserless/chrome:latest
+    env_file: '.browserless.env'
+    ports:
+      - '3000:3000'
+  bot:
+    container_name: 'bot'
+    build: .
+    env_file: '.env'
+    ports:
+      - '5000:5000'
+    depends_on:
+      - browserless
+    links:
+      - 'browserless:browserless'
