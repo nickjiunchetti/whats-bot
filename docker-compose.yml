@@ -4,7 +4,7 @@ services:
     image: browserless/chrome:latest
     env_file: '.browserless.env'
     ports:
-      - '3000:3000'
+      - '8000:8000'
   bot:
     container_name: 'bot'
     build: .
