@@ -2,8 +2,8 @@ const qrcode = require('qrcode-terminal')
 const { Client, LocalAuth } = require('whatsapp-web.js')
 const numberMask = require('./masks')
 
-const end = Date.now() + 1000
-while (Date.now() < end);
+// const end = Date.now() + 1000
+// while (Date.now() < end);
 
 const client = new Client({
   authStrategy: new LocalAuth(),
